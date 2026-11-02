@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        自律型AIシステム
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="{{ url_for(
+            'static',
+            filename='style.css'
+        ) }}"
+    >
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>
+            自律型AIシステム
+        </h1>
+
+        <div class="status">
+
+            <h2>
+                システム状態
+            </h2>
+
+            <p>
+                人物数：
+                <strong>
+                    {{ person_count }}
+                </strong>
+            </p>
+
+            <p>
+                X座標：
+                <strong>
+                    {{ x }}
+                </strong>
+            </p>
+
+            <p>
+                Y座標：
+                <strong>
+                    {{ y }}
+                </strong>
+            </p>
+
+            <p>
+                Confidence：
+                <strong>
+                    {{ confidence }}
+                </strong>
+            </p>
+
+            <p>
+                状態：
+                <strong>
+                    {{ state }}
+                </strong>
+            </p>
+
+            <p>
+                LED：
+                <strong>
+                    {{ led_state }}
+                </strong>
+            </p>
+
+            <p>
+                処理時間：
+                <strong>
+                    {{ "%.4f"|format(
+                        processing_time
+                    ) }}
+                </strong>
+                秒
+            </p>
+
+            <p>
+                FPS：
+                <strong>
+                    {{ "%.1f"|format(fps) }}
+                </strong>
+            </p>
+
+            <p>
+                CPU使用率：
+                <strong>
+                    {{ "%.1f"|format(
+                        cpu_usage
+                    ) }} %
+                </strong>
+            </p>
+
+            <p>
+                メモリ使用率：
+                <strong>
+                    {{ "%.1f"|format(
+                        memory_usage
+                    ) }} %
+                </strong>
+            </p>
+
+            <p>
+                Raspberry Pi：
+                <strong>
+                    {{ raspberry_pi_status }}
+                </strong>
+            </p>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>

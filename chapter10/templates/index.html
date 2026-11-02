@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>
+        自律型AIシステム
+    </title>
+
+</head>
+
+
+<body>
+
+    <h1>
+        自律型AIシステム
+    </h1>
+
+
+    <h2>
+        カメラ映像
+    </h2>
+
+
+    <img
+        src="/video"
+        width="640"
+    >
+
+
+    <h2>
+        システム状態
+    </h2>
+
+
+    <p>
+        人数：
+        {{ person_count }}
+        人
+    </p>
+
+
+    <p>
+        現在の状態：
+        {{ state }}
+    </p>
+
+
+    <p>
+        AIの判断：
+        {{ ai_message }}
+    </p>
+
+
+    <p>
+        Raspberry Pi：
+        {{ raspberry_pi.status }}
+    </p>
+
+
+    <p>
+        LED：
+        {{ led }}
+    </p>
+
+
+</body>
+
+</html>
