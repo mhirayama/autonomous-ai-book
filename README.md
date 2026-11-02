@@ -29,7 +29,6 @@
 システムは、主にUbuntu PCとRaspberry Pi Zero WHから構成されます。
 
 ```
-
 【現実環境】
     │
     ↓
@@ -70,26 +69,26 @@
     ↓
 【現実環境】
 ```
+
 ### Ubuntu PC
 
 Ubuntu PCでは、AI処理とシステム全体の管理を行います。
 
 - カメラ映像の取得
-    
+
 - OpenCVによる画像処理
-    
+
 - YOLOによる人物認識
-    
+
 - 人物数の取得
-    
+
 - 状態判断
-    
+
 - MariaDBへのデータ保存
-    
+
 - Raspberry PiとのHTTP通信
-    
+
 - FlaskによるWebインターフェース
-    
 
 ### Raspberry Pi Zero WH
 
@@ -117,16 +116,16 @@ GPIO17は、Raspberry Pi Zero WHの物理ピン11に対応します。
 
 ## 使用技術
 
-|技術|用途|
-|---|---|
-|Python|システム全体の開発|
-|OpenCV|カメラ映像の取得・画像処理|
-|YOLO|人物認識|
-|MariaDB|状態データの保存|
-|Flask|Webインターフェース・通信API|
-|Raspberry Pi Zero WH|GPIOによる物理制御|
-|gpiozero|Raspberry PiのGPIO制御|
-|Git|ソースコード管理|
+| 技術                   | 用途                  |
+| -------------------- | ------------------- |
+| Python               | システム全体の開発           |
+| OpenCV               | カメラ映像の取得・画像処理       |
+| YOLO                 | 人物認識                |
+| MariaDB              | 状態データの保存            |
+| Flask                | Webインターフェース・通信API   |
+| Raspberry Pi Zero WH | GPIOによる物理制御         |
+| gpiozero             | Raspberry PiのGPIO制御 |
+| Git                  | ソースコード管理            |
 
 ---
 
@@ -135,15 +134,14 @@ GPIO17は、Raspberry Pi Zero WHの物理ピン11に対応します。
 主な開発環境は以下を想定しています。
 
 - Ubuntu
-    
+
 - Python 3
-    
+
 - Raspberry Pi Zero WH
-    
+
 - USBカメラ
-    
+
 - MariaDB
-    
 
 Pythonの依存パッケージについては、プロジェクトの仮想環境を利用してインストールしてください。
 
@@ -155,7 +153,9 @@ Pythonの依存パッケージについては、プロジェクトの仮想環�
 
 ```text
 python-autonomous-ai-book/
-│
+
+├── LICENSE
+├── README.md
 ├── chapter01
 │   ├── environment_check.py
 │   └── hello.py
@@ -172,8 +172,7 @@ python-autonomous-ai-book/
 │   ├── chapter03-3.py
 │   ├── chapter03-4.py
 │   ├── chapter03-5.py
-│   ├── chapter03-6.py
-│   └── yolo11n.pt
+│   └── chapter03-6.py
 ├── chapter04
 │   ├── chapter04-1-1.py
 │   ├── chapter04-1-2.py
@@ -182,8 +181,7 @@ python-autonomous-ai-book/
 │   ├── chapter04-16.py
 │   ├── chapter04-2-1.py
 │   ├── chapter04-2-2.py
-│   ├── chapter04-5.py
-│   └── yolo11n.pt
+│   └── chapter04-5.py
 ├── chapter05
 │   ├── chapter05-2-1.py
 │   ├── chapter05-2-2.py
@@ -198,8 +196,7 @@ python-autonomous-ai-book/
 │   ├── chapter05-6-1.py
 │   ├── chapter05-6-2.py
 │   ├── chapter05-6-3.py
-│   ├── chapter05-6-4.py
-│   └── yolo11n.pt
+│   └── chapter05-6-4.py
 ├── chapter06
 │   ├── chapter06-1-1.py
 │   ├── chapter06-1-2.py
@@ -209,8 +206,7 @@ python-autonomous-ai-book/
 │   ├── chapter06-3-2.py
 │   ├── chapter06-4-1.py
 │   ├── chapter06-4-2.py
-│   ├── chapter06-6.py
-│   └── yolo11n.pt
+│   └── chapter06-6.py
 ├── chapter07
 │   ├── chapter07-8-1.py
 │   ├── chapter07-8-2.py
@@ -227,8 +223,7 @@ python-autonomous-ai-book/
 ├── chapter09
 │   ├── chapter09-1.py
 │   ├── chapter09-8-1.py
-│   ├── chapter09-8-2.py
-│   └── yolo11n.pt
+│   └── chapter09-8-2.py
 ├── chapter10
 │   ├── chapter10-1.py
 │   ├── chapter10-2.py
@@ -238,17 +233,19 @@ python-autonomous-ai-book/
 ├── chapter11
 │   ├── chapter11-3.py
 │   ├── chapter11-6.py
-│   ├── chapter11-8.py
-│   └── yolo11n.pt
-└── chapter12
-    ├── chapter12-10.py
-    ├── chapter12-11.py
-    ├── static
-    │   └── style.css
-    ├── system.log
-    ├── templates
-    │   └── index.html
-    └── yolo11n.pt
+│   └── chapter11-8.py
+├── chapter12
+│   ├── chapter12-10.py
+│   ├── chapter12-11.py
+│   ├── static
+│   │   └── style.css
+│   ├── system.log
+│   └── templates
+│       └── index.html
+├── etc
+│   ├── people_detection.csv
+│   └── python_csv.py
+└── requirements.txt
 
 ```
 
